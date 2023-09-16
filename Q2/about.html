@@ -1,0 +1,245 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>About Us - Your Hotel Name</title>
+    <link rel="stylesheet" href="style.css"> <!-- Link to your CSS file -->
+     <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.6.4/jquery.min.js"></script>
+
+
+
+  <script>
+  $(function () {
+      var $element = $('p');
+      setInterval(function () {
+          $element.fadeIn(1000, function () {
+              $element.fadeOut(1500, function () {
+                  $element.fadeIn(1500)
+              });
+          });
+      }, 1000);
+  });
+  </script>
+
+
+    <style>/* Reset some default styles */
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+/* Apply a background color to the body */
+body {
+    background-color: #f7f7f7;
+    font-family: Arial, sans-serif;
+    line-height: 3;
+    color: white;
+}
+
+/* Style the header and navigation */
+header {
+    background-color: #222;
+    color: #fff;
+    padding: 20px 0;
+}
+
+nav ul {
+    list-style-type: none;
+    text-align: center;
+}
+
+nav ul li {
+    display: inline;
+    margin-right: 20px;
+}
+
+nav ul li a {
+    text-decoration: none;
+    color: #fff;
+    font-weight: bold;
+}
+
+/* Style the "About Us" section */
+.about-us {
+    max-width: 1200px;
+    margin: 0 auto;
+    padding: 40px;
+    background-color: #fff;
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+    border-radius: 10px;
+}
+
+.about-content {
+    text-align: center;
+    padding: px;
+}
+
+.about-content h1 {
+    font-size: 36px;
+    color: gold;
+    margin-bottom: 20px;
+}
+
+.subtitle {
+    color: #ff9900;
+    font-size: 24px;
+    margin-bottom: 10px;
+}
+
+.about-content p {
+    font-size: 25px;
+    color: white;
+    margin-bottom: px;
+
+}
+
+.btn {
+    display: inline-block;
+    background-color: #ff9900;
+    color: #fff;
+    padding: 10px 20px;
+    text-decoration: none;
+    border-radius: 5px;
+    font-weight: bold;
+    transition: background-color 0.3s ease-in-out;
+}
+
+.btn:hover {
+    background-color: #e68a00;
+}
+
+
+/* Add background image to the "About Us" section */
+.about-us {
+    max-width: fit-content;
+    margin: 0 auto;
+    padding: 40px;
+    background-image: url('https://images5.alphacoders.com/349/349822.jpg'); /* Replace 'your-background-image.jpg' with the actual path to your image */
+    background-size: cover;
+    background-position: center;
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+    border-radius: 10px;
+    color:white ; /* Set text color to white for better visibility on the background image */
+}
+
+/* Rest of your existing styles */
+
+
+/* Style the footer */
+footer {
+    background-color: #222;
+    color: #fff;
+    text-align: center;
+    padding: 20px 0;
+    border-top: 2px solid #ff9900;
+}
+    </style>
+
+</head>
+<body>
+    <header>
+        <nav>
+            <ul>
+                <li><a  target="_blank" href="hotel.html">Rooms</a></li>
+                <li><a  target="_blank" href="contact.html">Contact</a></li>
+            </ul>
+        </nav>
+    </header>
+    <section class="about-us">
+        <div class="about-content">
+            <h1>Welcome to Our Hotel</h1>
+            <p>Discover the ultimate luxury experience at Your Hotel Name. Nestled in a breathtaking location, our hotel offers a blend of elegance, comfort, and top-notch hospitality.</p>
+            <p>With stunning panoramic views, world-class amenities, and impeccable service, we ensure that your stay with us is truly unforgettable.</p>
+            <p>Our commitment to excellence has earned us a reputation as one of the finest hotels worldwide. Whether you're here for business or leisure, Your Hotel Name is your home away from home.</p>
+            <a  target="_blank" href="tariff.html" class="btn">Book Your Stay</a>
+        </div>
+        <!-- Insert hotel images here -->
+    </section>
+    <footer>
+        <p>&copy; 2023 Your Hotel Name. All Rights Reserved.</p>
+    </footer>
+
+  <br><br>
+
+  <!-- Button to change text style -->
+      <button id="changeTextStyleButton">Change Text Style</button>
+
+
+      <!-- Button to change background color -->
+      <button id="changeBackgroundColorButton">Change Background Color</button>
+
+
+
+
+
+
+  <!-- JavaScript code for button click actions -->
+  <script>
+      const changeTextStyleButton = document.getElementById('changeTextStyleButton');
+      const changeTextColorButton = document.getElementById('changeTextColorButton');
+      const changeBackgroundColorButton = document.getElementById('changeBackgroundColorButton');
+      const allElements = document.querySelectorAll('*'); // Select all HTML elements
+
+      // Array of text styles
+      const textStyles = [
+          { fontSize: '16px', fontFamily: 'Arial' },
+          { fontSize: '18px', fontFamily: 'Times New Roman' },
+          { fontSize: '20px', fontFamily: 'Verdana' },
+          { fontSize: '14px', fontFamily: 'Courier New' },
+          { fontSize: '22px', fontFamily: 'Georgia' },
+          { fontSize: '19px', fontFamily: 'Helvetica' },
+          { fontSize: '17px', fontFamily: 'Tahoma' },
+          { fontSize: '15px', fontFamily: 'Lucida Sans' },
+          { fontSize: '21px', fontFamily: 'Palatino' },
+          { fontSize: '24px', fontFamily: 'Impact' }
+          // Add more text styles as needed
+      ];
+      let currentTextStyleIndex = 0;
+
+      // Array of background colors
+      const backgroundColors = [
+          'white',
+          'lightgray',
+          'lightblue',
+          'lightgreen',
+          'lightyellow',
+          'lavender',
+          'lightcoral',
+          'lightseagreen',
+          'mistyrose',
+          'lightsteelblue'
+          // Add more colors as needed
+      ];
+      let currentBackgroundColorIndex = 0;
+
+      // Function to change the text style
+      function changeTextStyle() {
+          currentTextStyleIndex = (currentTextStyleIndex + 1) % textStyles.length;
+          const currentStyle = textStyles[currentTextStyleIndex];
+          // Apply the new text style to all HTML elements
+          allElements.forEach(element => {
+              Object.assign(element.style, currentStyle);
+          });
+      }
+
+
+
+      // Function to change the background color
+      function changeBackgroundColor() {
+          currentBackgroundColorIndex = (currentBackgroundColorIndex + 1) % backgroundColors.length;
+          // Apply the new background color to all HTML elements
+          allElements.forEach(element => {
+              element.style.backgroundColor = backgroundColors[currentBackgroundColorIndex];
+          });
+      }
+
+      // Add event listeners to buttons
+      changeTextStyleButton.addEventListener('click', changeTextStyle);
+        changeBackgroundColorButton.addEventListener('click', changeBackgroundColor);
+  </script>
+
+
+</body>
+</html>

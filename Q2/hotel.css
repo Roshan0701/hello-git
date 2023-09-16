@@ -1,0 +1,722 @@
+/* Default styles */
+.gallery {
+  margin: px;
+  border: 1px solid #ccc;
+  float: left;
+  width: 33%; /* Three pictures in one row */
+  display:inline-block;
+}
+
+/* Additional styles for smaller screens (tablets) */
+@media screen and (max-width: 768px) {
+  .gallery {
+    width: 50%; /* Two pictures in one row */
+  }
+}
+
+/* Additional styles for even smaller screens (mobile phones) */
+@media screen and (max-width: 480px) {
+  .gallery {
+    width: 100%; /* One picture in one row */
+  }
+}
+
+/* Nav css starts here */
+/* CSS for sticky footer */
+body {
+  margin: 0;
+  padding: 0;
+  height: 100%;
+  display: flex;
+  flex-direction: column;
+}
+
+footer {
+  background-color: purple;
+  text-align: center;
+  padding: 10px 0;
+  flex-shrink: 0; /* Prevent footer from shrinking */
+}
+
+/* Rest of your existing CSS styles for other elements */
+
+
+.containerr {
+  background-color: white;
+}
+
+#a {
+  background-color: darkorange;
+  margin-right: 40px;
+}
+
+#b {
+  background-color: darkorange;
+  margin-right: 40px;
+}
+
+#c {
+  background-color: darkorange;
+  margin-right: 40px;
+}
+
+#d {
+  background-color: darkorange;
+  margin-right:30px;
+}
+
+#e {
+  background-color: darkorange;
+}
+
+ul {
+  list-style-type: none;
+  margin: 0;
+  padding: 0;
+  overflow: hidden;
+  background-color: ;
+}
+
+li {
+  font-size: 30px;
+}
+
+ul li {
+  float: left;
+}
+
+ul li a {
+  display: inline-block;
+  color: black;
+  text-align: center;
+  padding: 20px 16px;
+  text-decoration: none;
+}
+
+ul li a:hover:not(.active) {
+  background-color: coral;
+}
+
+ul li a.active {
+  background-color: #04AA6D;
+}
+
+ul li {
+  float: left;
+}
+
+@media screen and (max-width: 600px) {
+  ul li,
+  ul li {
+    float: none;
+  }
+
+  /* Nav css ends here */
+}
+
+.branding {
+  border: 2px solid black;
+  text-shadow: 2px 2px 4px #2154FF;
+}
+
+.red {
+  /* h1 css start here */
+  margin: auto;
+  padding: 2px;
+  text-align: center;
+  width: 40%;
+  color: FF0000;
+  text-shadow: 2px 2px 4px #0000FF;
+  /* h1 css ends here */
+}
+
+.w3-black:hover {
+  background-color: orange;
+}
+
+.w3-black {
+  color: #fff;
+  background-color: #000;
+  width: 250px;
+  margin-left: 0px;
+}
+
+.w3-padding {
+  padding: 8px 16px;
+}
+
+img {
+  border-style: none;
+  height: 300px;
+  margin-left: 0px;
+}
+
+html,
+body {
+  font-family: sans-serif;
+  font-size: 15px;
+  line-height: 1.5;
+}
+
+.w3-display-container {
+  display: inline-block;
+  position: relative;
+}
+
+span {
+  display: block;
+  /*border: 2px solid black;
+  outline: Black solid 10px;*/
+  margin: auto;
+  padding: 20px;
+  text-align: center;
+}
+
+button {
+  display: inline-block;
+  border-radius: 4px;
+  background-color: greenyellow;
+  border: none;
+  color: #FFFFFF;
+  text-align: center;
+  padding: 10px;
+  transition: all 0.5s;
+  cursor: pointer;
+  margin: 5px;
+}
+
+button a {
+  cursor: pointer;
+  display: inline-block;
+  position: relative;
+  transition: 0.5s;
+}
+
+button a:after {
+  content: '\00bb';
+  position: absolute;
+  opacity: 0;
+  top: 0;
+  right: -20px;
+  transition: 0.5s;
+}
+
+button:hover a {
+  padding-right: 5px;
+}
+
+a {
+  text-decoration: none;
+}
+
+button:hover a:after {
+  opacity: 1;
+  right: 0;
+}
+
+@media screen and (max-width: 600px) {
+  section,
+  img {
+    width: 87%;
+  }
+
+  .w3-black {
+    width: 73%;
+  }
+
+  span {
+    margin-left: 60px;
+    width: 61%;
+  }
+}
+
+
+  marquee,
+ #e,
+  #d,
+    #c,
+  #b,
+  #a  {
+    display: inline-block;
+  }
+}
+
+@media only screen and (max-width: 350px) {
+  span {
+    margin-left: 60px;
+    width: 70%;
+  }
+
+  section,
+  img {
+    width: 78%;
+    margin-right: 0px;
+  }
+
+  .w3-black {
+    width: inherit;
+    margin-right: 0px;
+  }
+
+  marquee,
+  #d,
+    #e,
+    #c,
+  #b,
+  #a  {
+    display: inline-block;
+  }
+}
+
+@media screen and (min-width: 300px) {
+  .red {
+    width: 100%;
+    font-size: 40px;
+  }
+
+  marquee,
+    #d,
+    #e,
+    #c,
+  #b,
+  #a {
+    display: inline-block;
+  }
+
+  span {
+    margin-left: 43px;
+    width: 74.1%;
+    margin-bottom: 20px;
+  }
+
+  section,
+  img {
+    width: 92%;
+    margin-right: 0px;
+  }
+
+  .w3-black {
+    width: inherit;
+    margin-right: 0px;
+  }
+}
+
+/* Additional responsive styles for your other elements can be added here */
+/* Original CSS for IDs a, b, c, d, e */
+
+/* Add this media query for responsiveness */
+@media screen and (max-width: 600px) {
+  #a, #b, #c, #d, #e {
+    background-color: darkorange;
+    margin: 5px 0;
+    width: 60%; /* Make the items take up full width on small screens */
+    text-align: center; /* Center text on small screens */
+  }
+}
+img {
+  max-width: 100%; /* Maximum width is 100% of its container */
+  height: auto; /* Maintain aspect ratio */
+}
+​
+
+    /* Nav css starts here */
+
+    body {
+      margin: 0;
+    }
+
+
+
+.containerr{background-color:white;}
+
+
+
+#a{background-color:darkorange;
+margin-right:100px;
+}
+
+#b{background-color:darkorange;
+margin-right:100px;
+}
+
+#c{background-color:darkorange;margin-right:100px;}
+
+
+#d{background-color:darkorange;margin-right:100px;}
+
+
+#e{background-color:darkorange;}
+
+
+
+
+
+    ul {
+      list-style-type: none;
+      margin: 0;
+      padding: 0;
+      overflow: hidden;
+      background-color: ;
+
+    }
+
+    li {
+      Font-size: 30px;
+    }
+
+    ul li {
+      float: left;
+    }
+
+    ul li a {
+      display:inline-block;
+      color:black ;
+      text-align: center;
+      padding: 20px 16px;
+      text-decoration: none;
+    }
+
+    ul li a:hover:not(.active) {
+      background-color: coral;
+    }
+
+    ul li a.active {
+      background-color: #04AA6D;
+    }
+
+    ul li {
+      float: Left;
+    }
+
+    @media screen and (max-width: 600px) {
+
+      ul li,
+      ul li {
+        float: none;
+      }
+
+      /* Nav css ends here */
+    }
+
+
+
+.branding{border: 2px solid black;
+text-shadow: 2px 2px 4px #2154FF;
+}
+
+
+
+
+    .red {
+      /* h1 css start here */
+
+      margin: auto;
+      padding: 2px;
+      text-align: center;
+      width: 40%;
+      color: FF0000;
+      text-shadow: 2px 2px 4px #0000FF;
+      /* h1 css ends here */
+    }
+
+
+
+    .w3-black:hover {
+      background-color: orange;
+    }
+
+    .w3-black {
+      color: #fff;
+      background-color: #000;
+      width: 250px;
+      margin-left: 0px;
+    }
+
+    .w3-padding {
+      padding: 8px 16px;
+    }
+
+    img {
+      border-style: none;
+      height: 300px;
+      margin-left: 50px;
+
+    }
+
+    html,
+    body {
+      font-family: sans-serif;
+      font-size: 15px;
+      line-height: 1.5;
+    }
+
+    .w3-display-container {
+      display: inline-block;
+      position: relative;
+    }
+
+
+
+span{display:block;
+  border: 2px solid black;
+  outline: Black solid 10px;
+  margin: auto;
+  padding: 20px;
+  text-align: center;
+}
+
+
+
+
+
+
+
+
+
+
+button {
+  display: inline-block;
+  border-radius: 4px;
+  background-color: greenyellow;
+  border: none;
+  color: #FFFFFF;
+  text-align: center;
+  padding: 10px;
+  transition: all 0.5s;
+  cursor: pointer;
+  margin: 5px;
+}
+
+button a {
+  cursor: pointer;
+  display: inline-block;
+  position: relative;
+  transition: 0.5s;
+}
+
+button a:after {
+  content: '\00bb';
+  position: absolute;
+  opacity: 0;
+  top: 0;
+  right: -20px;
+  transition: 0.5s;
+}
+
+button:hover a {
+  padding-right: 5px;
+}
+
+a{text-decoration: none;}
+
+button:hover a:after {
+  opacity: 1;
+  right: 0;
+}
+
+
+
+
+
+ @media screen and (max-width: 600px) {
+
+section,
+        img {
+          width: 87%;
+        }
+
+        .w3-black {
+          width: 73%;
+        }
+
+ Span{margin-left: 60px;
+     width: 61%;
+     }
+
+}
+
+
+
+
+
+
+
+
+    @media only screen and (max-width:350px) {
+     Span{margin-left: 60px;
+     width: 70%;
+     }
+
+section,
+        img {
+          width: 78%;
+          margin-right: 50px;
+        }
+
+        .w3-black {
+          width: inherit;
+          margin-right: 0px;
+        }
+
+        marquee,#c,#b,#a{display:inline-block;
+
+
+        }
+
+
+
+}
+
+
+
+
+
+  @media screen and (min-width: 300px) {
+      .red {
+        width: 100%;
+        font-size: 40px;
+      }
+
+
+
+        marquee,#c,#b,#a{display:inline-block;
+
+
+        }
+
+        Span{margin-left: 43px;
+     width: 74.1%;
+    margin-bottom:20px;
+     }
+
+section,
+        img {
+          width: 92%;
+          margin-right: 50px;
+        }
+
+        .w3-black {
+          width: inherit;
+          margin-right:0px;
+        }
+
+
+    }
+
+
+div.gallery {
+  margin: 10px;
+  border: 1px solid #ccc;
+ width: 400px;
+float:left;
+}
+
+div.gallery:hover {
+  border: 1px solid #777;
+}
+
+
+div.desc {
+  text-align: center;
+}
+
+
+
+
+
+
+img {
+  display: block;
+  margin-left: auto;
+  margin-right: auto;
+  width:85%;
+}
+
+
+
+
+
+
+  #newsletter{   overflow: hidden;
+     background-color: #f2f2f2;
+    }
+
+
+
+
+
+ input[type=email]{  width: 75%;}
+
+  input[type=text],
+        input[type=email],
+        select,
+        textarea {
+          width: 85%;
+          padding: 12px;
+          border: 1px solid #ccc;
+          border-radius: 4px;
+          resize: vertical;
+          margin-left:50px;
+        }
+
+        label {
+          padding: 12px 12px 12px 0;
+          display: inline-block;
+          background-color: Skyblue;
+          width:100%;
+          margin:10px;
+        }
+
+        input[type=submit] {
+          background-color: Gold;
+          color: white;
+          padding: 12px 20px;
+          border: none;
+          border-radius: 4px;
+          cursor: pointer;
+          float: right;
+        }
+
+        input[type=submit]:hover {
+          background-color: Red;
+        }
+
+        .container {
+          border-radius: 5px;
+
+          padding: 20px;
+
+        }
+
+        .col-25 {
+          float: left;
+          width: 25%;
+          margin-top: 6px;
+        }
+
+        .col-75 {
+          float: left;
+          width: 75%;
+          margin-top: 6px;
+        }
+
+        /* Clear floats after the columns */
+        .row::after {
+          content: "";
+          display: table;
+          clear: both;
+        }
+
+        /* Responsive layout - when the screen is less than 600px wide, make the two columns stack on top of each other instead of next to each other */
+
+@media screen and (max-width: 600px) {
+
+  .col-25, .col-75, input[type=submit],input[type=email] {
+
+    width: 85%;
+
+    margin-top: 0;
+
+  }
+
+}

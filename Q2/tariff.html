@@ -1,0 +1,450 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Tariff Hotel Booking</title>
+<link rel="stylesheet" href="tarif.css">
+<link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.4.1/css/bootstrap.min.css">
+<script src="https://ajax.googleapis.com/ajax/libs/jquery/3.6.4/jquery.min.js"></script>
+<script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.4.1/js/bootstrap.min.js"></script>
+<style>
+        /* CSS for the header */
+        header {
+            background-color: #333;
+            color: #fff;
+            text-align: center;
+            padding: 10px 0;
+        }
+        /* CSS for the room section */
+        .room {
+            width: 100%;
+            margin: 10px;
+            float: left;
+            border: 1px solid #ccc;
+            padding: 10px;
+            text-align: center;
+        }
+        .room img {
+
+        }
+        .room h2 {
+            color: #333;
+        }
+        .room p {
+            margin: 10px 0;
+            color: #666;
+        }
+        .room .price {
+            font-weight: bold;
+            color: #007BFF;
+        }
+        .room button {
+            background-color: #007BFF;
+            color: #fff;
+            border: none;
+            padding: 10px 20px;
+            cursor: pointer;
+        }
+        .room button:hover {
+            background-color: #0056b3;
+        }
+        .footer {
+            clear: both;
+            text-align: center;
+            background-color: #333;
+            color: #fff;
+            padding: 10px;
+        }
+
+
+
+
+
+        /* Media Queries for Responsive Design */
+        @media (max-width: 768px) {
+           .room {
+                width: 100%; /* One room per row on mobile devices */
+            }
+        }
+
+        @media (max-width: 480px) {
+            .room {
+                width: 100%; /* One room per row on mobile devices */
+            }
+        }
+
+        /* CSS for displaying three pictures in one row */
+        .row {
+            display: flex;
+            justify-content: space-between;
+        }
+</style>
+
+</head>
+<body>
+
+    <header>
+        <h1>Welcome to Tariff Hotel</h1>
+    </header>
+
+
+
+
+
+<section class="row">
+
+   <!-- Room 1 -->
+     <div class="card room">
+     <div class="card-body">
+          <h2 class="card-title">Room Number 1</h2>
+          <img src="https://i.pinimg.com/originals/69/bd/ff/69bdfff422c17ad63091670cfcf42af0.jpg" alt="Room 1 Image 1" class="card-img-top">
+          <br>
+             <br>
+          <button type="button" class=" btn btn-info " data-toggle="collapse" data-target="#demo">Magic</button>
+         <div id="demo" class="collapse">
+
+          <p class="card-text">Description: This cozy room is perfect for a relaxing stay. Enjoy a comfortable bed and a view of the city.</p>
+          <p class="card-text price"><strong>Price: $150 per night</strong></p>
+          <button class="btn btn-primary" data-toggle="modal" data-target="#room1Modal">View Details</button>
+      </div>
+        </div>
+
+
+
+
+      <!-- Room 1 Modal -->
+  <div class="modal fade" id="room1Modal" tabindex="-1" role="dialog" aria-labelledby="room1ModalLabel" aria-hidden="true">
+      <div class="modal-dialog" role="document">
+          <div class="modal-content">
+              <div class="modal-header">
+                  <h5 class="modal-title" id="room1ModalLabel">Room Number 1</h5>
+                  <button type="button" class="close" data-dismiss="modal" aria-label="Close">
+                      <span aria-hidden="true">&times;</span>
+                  </button>
+              </div>
+              <div class="modal-body">
+                  <img src="https://i.pinimg.com/originals/69/bd/ff/69bdfff422c17ad63091670cfcf42af0.jpg" alt="Room 1 Image 1" class="img-fluid">
+                  <p>Description: This cozy room is perfect for a relaxing stay. Enjoy a comfortable bed and a view of the city.</p>
+                  <p><strong>Price: $150 per night</strong></p>
+                  <!-- Add more details here if needed -->
+              </div>
+              <div class="modal-footer">
+                  <button type="button" class="btn btn-secondary" data-dismiss="modal">Close</button>
+                  <button type="button" class="btn btn-primary">Book Now</button>
+              </div>
+          </div>
+      </div>
+  </div>
+  </div>
+
+  <!-- Room 2 -->
+  <div class="card room" >
+      <div class="card-body">
+          <h2 class="card-title">Room Number 2</h2>
+          <img src="https://t3.ftcdn.net/jpg/02/71/08/28/360_F_271082810_CtbTjpnOU3vx43ngAKqpCPUBx25udBrg.jpg" alt="Room 2 Image 1" class="card-img-top" >
+
+          <br>
+             <br>
+          <button type="button" class=" btn btn-info " data-toggle="collapse" data-target="#demo">Magic</button>
+         <div id="demo" class="collapse">
+          <p class="card-text">Description: Our spacious suite with a beautiful ocean view. Ideal for a luxurious getaway.</p>
+          <p class="card-text price"><strong>Price: $200 per night</strong></p>
+          <button class="btn btn-primary" data-toggle="modal" data-target="#room2Modal">View Details</button>
+      </div>
+  </div>
+
+  <!-- Room 2 Modal -->
+  <div class="modal fade" id="room2Modal" tabindex="-1" role="dialog" aria-labelledby="room2ModalLabel" aria-hidden="true">
+      <div class="modal-dialog" role="document">
+          <div class="modal-content">
+              <div class="modal-header">
+                  <h5 class="modal-title" id="room2ModalLabel">Room Number 2</h5>
+                  <button type="button" class="close" data-dismiss="modal" aria-label="Close">
+                      <span aria-hidden="true">&times;</span>
+                  </button>
+              </div>
+              <div class="modal-body">
+                  <img src="https://t3.ftcdn.net/jpg/02/71/08/28/360_F_271082810_CtbTjpnOU3vx43ngAKqpCPUBx25udBrg.jpg" alt="Room 2 Image 1" class="img-fluid">
+                  <p>Description: Our spacious suite with a beautiful ocean view. Ideal for a luxurious getaway.</p>
+                  <p><strong>Price: $200 per night</strong></p>
+                  <!-- Add more details here if needed -->
+              </div>
+              <div class="modal-footer">
+                  <button type="button" class="btn btn-secondary" data-dismiss="modal">Close</button>
+                  <button type="button" class="btn btn-primary">Book Now</button>
+              </div>
+          </div>
+      </div>
+  </div>
+</div>
+
+  <!-- Room 3 -->
+  <div class="card room">
+      <div class="card-body">
+          <h2 class="card-title">Room Number 3</h2>
+          <img src="https://media.istockphoto.com/id/1066999762/photo/3d-rendering-beautiful-luxury-bedroom-suite-in-hotel-with-tv.jpg?s=612x612&w=0&k=20&c=kh1SoNvZYDdAFOadeKxPVssVKVzbMTIuOHQu-RBDoX0=" alt="Room 3 Image 1" class="card-img-top">
+
+          <br>
+             <br>
+          <button type="button" class=" btn btn-info " data-toggle="collapse" data-target="#demo">Magic</button>
+         <div id="demo" class="collapse">
+          <p class="card-text">Description: A family-friendly room with two beds and a garden view. Perfect for a vacation with kids.</p>
+          <p class="card-text price"><strong>Price: $180 per night</strong></p>
+          <button class="btn btn-primary" data-toggle="modal" data-target="#room3Modal">View Details</button>
+      </div>
+  </div>
+</div>
+  <!-- Room 3 Modal -->
+  <div class="modal fade" id="room3Modal" tabindex="-1" role="dialog" aria-labelledby="room3ModalLabel" aria-hidden="true">
+      <div class="modal-dialog" role="document">
+          <div class="modal-content">
+              <div class="modal-header">
+                  <h5 class="modal-title" id="room3ModalLabel">Room Number 3</h5>
+                  <button type="button" class="close" data-dismiss="modal" aria-label="Close">
+                      <span aria-hidden="true">&times;</span>
+                  </button>
+              </div>
+
+              <div class="modal-body">
+                  <img src="https://media.istockphoto.com/id/1066999762/photo/3d-rendering-beautiful-luxury-bedroom-suite-in-hotel-with-tv.jpg?s=612x612&w=0&k=20&c=kh1SoNvZYDdAFOadeKxPVssVKVzbMTIuOHQu-RBDoX0=" alt="Room 3 Image 1" class="img-fluid">
+                  <p>Description: A family-friendly room with two beds and a garden view. Perfect for a vacation with kids.</p>
+                  <p><strong>Price: $180 per night</strong></p>
+                  <!-- Add more details here if needed -->
+              </div>
+              <div class="modal-footer">
+                  <button type="button" class="btn btn-secondary" data-dismiss="modal">Close</button>
+                  <button type="button" class="btn btn-primary">Book Now</button>
+              </div>
+          </div>
+      </div>
+  </div>
+
+
+
+        </section>
+
+
+
+    <section class="row">
+
+
+      <!-- Room 4 -->
+      <div class="card room">
+          <div class="card-body">
+              <h2 class="card-title">Room Number 4</h2>
+              <img src="https://www.cheaphotelsall.com/wp-content/uploads/2021/08/Best-Hotel-Room-1536x879.jpg" alt="Room 4 Image 1" class="card-img-top">
+              <p class="card-text">Description: This modern room offers a workspace and city skyline views. Ideal for business travelers.</p>
+              <p class="card-text price"><strong>Price: $170 per night</strong></p>
+              <button class="btn btn-primary" data-toggle="modal" data-target="#room4Modal">View Details</button>
+          </div>
+      </div>
+
+      <!-- Room 4 Modal -->
+      <div class="modal fade" id="room4Modal" tabindex="-1" role="dialog" aria-labelledby="room4ModalLabel" aria-hidden="true">
+          <div class="modal-dialog" role="document">
+              <div class="modal-content">
+                  <div class="modal-header">
+                      <h5 class="modal-title" id="room4ModalLabel">Room Number 4</h5>
+                      <button type="button" class="close" data-dismiss="modal" aria-label="Close">
+                          <span aria-hidden="true">&times;</span>
+                      </button>
+                  </div>
+                  <div class="modal-body">
+                      <img src="https://www.cheaphotelsall.com/wp-content/uploads/2021/08/Best-Hotel-Room-1536x879.jpg" alt="Room 4 Image 1" class="img-fluid">
+                      <p>Description: This modern room offers a workspace and city skyline views. Ideal for business travelers.</p>
+                      <p><strong>Price: $170 per night</strong></p>
+                      <!-- Add more details here if needed -->
+                  </div>
+                  <div class="modal-footer">
+                      <button type="button" class="btn btn-secondary" data-dismiss="modal">Close</button>
+                      <button type="button" class="btn btn-primary">Book Now</button>
+                  </div>
+              </div>
+          </div>
+      </div>
+
+      <!-- Room 5 -->
+      <div class="card room">
+          <div class="card-body">
+              <h2 class="card-title">Room Number 5</h2>
+              <img src="https://www.bestwesternplusmeridian.com/Content/images/room_banner_new.jpg" alt="Room 5 Image 1" class="card-img-top">
+              <p class="card-text">Description: A romantic suite with a jacuzzi and a balcony overlooking the mountains.</p>
+              <p class="card-text price"><strong>Price: $250 per night</strong></p>
+              <button class="btn btn-primary" data-toggle="modal" data-target="#room5Modal">View Details</button>
+          </div>
+      </div>
+
+      <!-- Room 5 Modal -->
+      <div class="modal fade" id="room5Modal" tabindex="-1" role="dialog" aria-labelledby="room5ModalLabel" aria-hidden="true">
+          <div class="modal-dialog" role="document">
+              <div class="modal-content">
+                  <div class="modal-header">
+                      <h5 class="modal-title" id="room5ModalLabel">Room Number 5</h5>
+                      <button type="button" class="close" data-dismiss="modal" aria-label="Close">
+                          <span aria-hidden="true">&times;</span>
+                      </button>
+                  </div>
+                  <div class="modal-body">
+                      <img src="https://www.bestwesternplusmeridian.com/Content/images/room_banner_new.jpg" alt="Room 5 Image 1" class="img-fluid">
+                      <p>Description: A romantic suite with a jacuzzi and a balcony overlooking the mountains.</p>
+                      <p><strong>Price: $250 per night</strong></p>
+                      <!-- Add more details here if needed -->
+                  </div>
+                  <div class="modal-footer">
+                      <button type="button" class="btn btn-secondary" data-dismiss="modal">Close</button>
+                      <button type="button" class="btn btn-primary">Book Now</button>
+                  </div>
+              </div>
+          </div>
+      </div>
+
+          <!-- Room 6 -->
+      <div class="card room">
+          <div class="card-body">
+              <h2 class="card-title">Room Number 6</h2>
+              <img src="https://www.usatoday.com/gcdn/-mm-/05b227ad5b8ad4e9dcb53af4f31d7fbdb7fa901b/c=0-64-2119-1259/local/-/media/USATODAY/USATODAY/2014/08/13/1407953244000-177513283.jpg" alt="Room 6 Image 1" class="card-img-top">
+              <p class="card-text">Description: An eco-friendly room with sustainable amenities and a lush garden view.</p>
+              <p class="card-text price"><strong>Price: $160 per night</strong></p>
+              <button class="btn btn-primary" data-toggle="modal" data-target="#room6Modal">View Details</button>
+          </div>
+      </div>
+
+      <!-- Room 6 Modal -->
+      <div class="modal fade" id="room6Modal" tabindex="-1" role="dialog" aria-labelledby="room6ModalLabel" aria-hidden="true">
+          <div class="modal-dialog" role="document">
+              <div class="modal-content">
+                  <div class="modal-header">
+                      <h5 class="modal-title" id="room6ModalLabel">Room Number 6</h5>
+                      <button type="button" class="close" data-dismiss="modal" aria-label="Close">
+                          <span aria-hidden="true">&times;</span>
+                      </button>
+                  </div>
+                  <div class="modal-body">
+                      <img src="https://www.usatoday.com/gcdn/-mm-/05b227ad5b8ad4e9dcb53af4f31d7fbdb7fa901b/c=0-64-2119-1259/local/-/media/USATODAY/USATODAY/2014/08/13/1407953244000-177513283.jpg" alt="Room 6 Image 1" class="img-fluid">
+                      <p>Description: An eco-friendly room with sustainable amenities and a lush garden view.</p>
+                      <p><strong>Price: $160 per night</strong></p>
+                      <!-- Add more details here if needed -->
+                  </div>
+                  <div class="modal-footer">
+                      <button type="button" class="btn btn-secondary" data-dismiss="modal">Close</button>
+                      <button type="button" class="btn btn-primary">Book Now</button>
+                  </div>
+              </div>
+          </div>
+      </div>
+
+
+
+    </section>
+
+
+    <div class="footer">
+        &copy; 2023 Tariff Hotel. All rights reserved by roshan.
+    </div>
+
+
+    <!-- Button to change text style -->
+        <button id="changeTextStyleButton">Change Text Style</button>
+
+
+        <!-- Button to change background color -->
+        <button id="changeBackgroundColorButton">Change Background Color</button>
+
+
+        <script src="https://code.jquery.com/jquery-3.3.1.slim.min.js" integrity="sha384-q8i/X+965DzO0rT7abK41JStQIAqVgRVzpbzo5smXKp4YfRvH+8abtTE1Pi6jizo" crossorigin="anonymous"></script>
+        <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.14.7/umd/popper.min.js" integrity="sha384-UO2eT0CpHqdSJQ6hJty5KVphtPhzWj9WO1clHTMGa3JDZwrnQq4sF86dIHNDz0W1" crossorigin="anonymous"></script>
+        <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/js/bootstrap.min.js" integrity="sha384-JjSmVgyd0p3pXB1rRibZUAYoIIy6OrQ6VrjIEaFf/nJGzIxFDsf4x0xIM+B07jRM" crossorigin="anonymous"></script>
+
+
+
+        <script>
+          function book() {
+            const totalGuests = "Your Hotel has all these features hotel room items such as TVs, sound systems, refrigerators, mini-bars, free Wi-Fi, coffee-makers, hairdryers, and more...";
+            alert("Your Room is booked " + totalGuests);
+          }
+        </script>
+
+
+
+        <script type="text/javascript">
+          var card = document.querySelector('.card');
+          card.addEventListener('click', function() {
+            card.classList.toggle('is-flipped');
+          });
+        </script>
+
+
+
+
+    <!-- JavaScript code for button click actions -->
+    <script>
+        const changeTextStyleButton = document.getElementById('changeTextStyleButton');
+        const changeTextColorButton = document.getElementById('changeTextColorButton');
+        const changeBackgroundColorButton = document.getElementById('changeBackgroundColorButton');
+        const allElements = document.querySelectorAll('*'); // Select all HTML elements
+
+        // Array of text styles
+        const textStyles = [
+            { fontSize: '16px', fontFamily: 'Arial' },
+            { fontSize: '18px', fontFamily: 'Times New Roman' },
+            { fontSize: '20px', fontFamily: 'Verdana' },
+            { fontSize: '14px', fontFamily: 'Courier New' },
+            { fontSize: '22px', fontFamily: 'Georgia' },
+            { fontSize: '19px', fontFamily: 'Helvetica' },
+            { fontSize: '17px', fontFamily: 'Tahoma' },
+            { fontSize: '15px', fontFamily: 'Lucida Sans' },
+            { fontSize: '21px', fontFamily: 'Palatino' },
+            { fontSize: '24px', fontFamily: 'Impact' }
+            // Add more text styles as needed
+        ];
+        let currentTextStyleIndex = 0;
+
+        // Array of background colors
+        const backgroundColors = [
+            'white',
+            'lightgray',
+            'lightblue',
+            'lightgreen',
+            'lightyellow',
+            'lavender',
+            'lightcoral',
+            'lightseagreen',
+            'mistyrose',
+            'lightsteelblue'
+            // Add more colors as needed
+        ];
+        let currentBackgroundColorIndex = 0;
+
+        // Function to change the text style
+        function changeTextStyle() {
+            currentTextStyleIndex = (currentTextStyleIndex + 1) % textStyles.length;
+            const currentStyle = textStyles[currentTextStyleIndex];
+            // Apply the new text style to all HTML elements
+            allElements.forEach(element => {
+                Object.assign(element.style, currentStyle);
+            });
+        }
+
+
+
+        // Function to change the background color
+        function changeBackgroundColor() {
+            currentBackgroundColorIndex = (currentBackgroundColorIndex + 1) % backgroundColors.length;
+            // Apply the new background color to all HTML elements
+            allElements.forEach(element => {
+                element.style.backgroundColor = backgroundColors[currentBackgroundColorIndex];
+            });
+        }
+
+        // Add event listeners to buttons
+        changeTextStyleButton.addEventListener('click', changeTextStyle);
+          changeBackgroundColorButton.addEventListener('click', changeBackgroundColor);
+    </script>
+
+
+
+
+
+</body>
+</html>

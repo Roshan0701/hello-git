@@ -1,0 +1,169 @@
+<!DOCTYPE html>
+<html lang="en" dir="ltr">
+  <head>
+    <meta charset="utf-8">
+    <title></title>
+
+    <link rel="stylesheet" href="reserv.css">
+  </head>
+
+  <body>
+    <div class="testbox">
+      <h2>Hotel Reservation</h2>
+      <form action="/action_page.php" id="reservationForm">
+        <div class="columns">
+          <div class="item">
+            <label for="fname">First Name<span>*</span></label><br>
+            <input id="fname" type="text" name="fname" placeholder="John" required autofocus/>
+          </div>
+          <div class="item">
+            <label for="lname">Last Name<span>*</span></label><br>
+            <input id="lname" type="text" name="lname" placeholder="Doe" required/>
+          </div>
+          <div class="item">
+            <label for="phone">Phone Number<span>*</span></label><br>
+            <input id="phone" type="tel" name="phone" required style="width:360px;"/>
+          </div>
+          <div class="item">
+            <label for="address">Email Address<span>*</span></label><br>
+            <input id="address" type="text" name="address" placeholder="abcd123@gmail.com" required style="width:360px;"/>
+          </div>
+        </div>
+        <div class="item">
+          <label for="ArrivalDate">Arrival Date<span>*</span></label><br>
+          <input type="date" id="ArrivalDate" name="ArrivalDate">
+        </div>
+        <div class="item">
+          <label for="DepartureDate">Departure Date<span>*</span></label><br>
+          <input type="date" id="DepartureDate" name="DepartureDate">
+        </div>
+        <div class="item">
+          <label for="adult">Number Of Adults</label><br>
+          <input type="number" id="adult" name="adult" step="1">
+        </div>
+        <div class="item">
+          <label for="Children">Number Of Children</label><br>
+          <input type="number" id="Children" name="Children" step="1">
+        </div><br>
+        <label for="Comments">Comments/Question<span>*</span></label><br>
+        <textarea name="Comments" rows="10" cols="45" placeholder="It is cool"></textarea>
+        <br><br>
+        <input type="checkbox" id="emails" name="emails" value="emails">
+        <label for="emails">I would like to receive email updates.</label><br><br>
+        <input type="submit" value="Submit" onclick="calculateTotal()">
+      </form>
+
+
+  <br><br>
+
+
+          <!-- Button to change text style -->
+              <button id="changeTextStyleButton">Change Text Style</button>
+
+
+              <!-- Button to change background color -->
+              <button id="changeBackgroundColorButton">Change Background Color</button>
+
+
+    </div>
+
+    <script>
+      function calculateTotal() {
+        const adultInput = document.getElementById("adult");
+        const childrenInput = document.getElementById("Children");
+        const totalAdults = parseInt(adultInput.value) || 0;
+        const totalChildren = parseInt(childrenInput.value) || 0;
+        const totalGuests = totalAdults + totalChildren;
+        alert("Total Guests: " + totalGuests);
+      }
+    </script>
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+    <!-- JavaScript code for button click actions -->
+    <script>
+        const changeTextStyleButton = document.getElementById('changeTextStyleButton');
+        const changeTextColorButton = document.getElementById('changeTextColorButton');
+        const changeBackgroundColorButton = document.getElementById('changeBackgroundColorButton');
+        const allElements = document.querySelectorAll('*'); // Select all HTML elements
+
+        // Array of text styles
+        const textStyles = [
+            { fontSize: '16px', fontFamily: 'Arial' },
+            { fontSize: '18px', fontFamily: 'Times New Roman' },
+            { fontSize: '20px', fontFamily: 'Verdana' },
+            { fontSize: '14px', fontFamily: 'Courier New' },
+            { fontSize: '22px', fontFamily: 'Georgia' },
+            { fontSize: '19px', fontFamily: 'Helvetica' },
+            { fontSize: '17px', fontFamily: 'Tahoma' },
+            { fontSize: '15px', fontFamily: 'Lucida Sans' },
+            { fontSize: '21px', fontFamily: 'Palatino' },
+            { fontSize: '24px', fontFamily: 'Impact' }
+            // Add more text styles as needed
+        ];
+        let currentTextStyleIndex = 0;
+
+        // Array of background colors
+        const backgroundColors = [
+            'white',
+            'lightgray',
+            'lightblue',
+            'lightgreen',
+            'lightyellow',
+            'lavender',
+            'lightcoral',
+            'lightseagreen',
+            'mistyrose',
+            'lightsteelblue'
+            // Add more colors as needed
+        ];
+        let currentBackgroundColorIndex = 0;
+
+        // Function to change the text style
+        function changeTextStyle() {
+            currentTextStyleIndex = (currentTextStyleIndex + 1) % textStyles.length;
+            const currentStyle = textStyles[currentTextStyleIndex];
+            // Apply the new text style to all HTML elements
+            allElements.forEach(element => {
+                Object.assign(element.style, currentStyle);
+            });
+        }
+
+
+
+        // Function to change the background color
+        function changeBackgroundColor() {
+            currentBackgroundColorIndex = (currentBackgroundColorIndex + 1) % backgroundColors.length;
+            // Apply the new background color to all HTML elements
+            allElements.forEach(element => {
+                element.style.backgroundColor = backgroundColors[currentBackgroundColorIndex];
+            });
+        }
+
+        // Add event listeners to buttons
+        changeTextStyleButton.addEventListener('click', changeTextStyle);
+          changeBackgroundColorButton.addEventListener('click', changeBackgroundColor);
+    </script>
+
+
+
+
+
+
+
+
+
+  </body>
+</html>

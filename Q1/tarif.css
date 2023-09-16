@@ -1,0 +1,66 @@
+/* CSS for the header */
+header {
+    background-color: blueviolet;
+    color: #fff;
+    text-align: center;
+    padding: 10px 0;
+}
+
+.room {
+    width: 30%;
+    margin: 10px;
+    float: left;
+    border: 1px solid #ccc;
+    padding: 10px;
+    text-align: center;
+}
+.room img {
+    max-width: 100%;
+}
+.room h2 {
+    color: #333;
+}
+.room p {
+    margin: 10px 0;
+    color: #666;
+}
+.room .price {
+    font-weight: bold;
+    color: #007BFF;
+}
+.room button {
+    background-color: blueviolet;
+    color: #fff;
+    border: none;
+    padding: 10px 20px;
+    cursor: pointer;
+}
+.room button:hover {
+    background-color: #0056b3;
+}
+.footer {
+    clear: both;
+    text-align: center;
+    background-color: blueviolet;
+    color: #fff;
+    padding: 10px;
+}
+
+/* Media Queries for Responsive Design */
+@media (max-width: 768px) {
+    .room {
+        width: 48%; /* Two rooms per row on tablets */
+    }
+}
+
+@media (max-width: 480px) {
+    .room {
+        width: 100%; /* One room per row on mobile devices */
+    }
+}
+
+/* CSS for displaying three pictures in one row */
+.row {
+    display: flex;
+    justify-content: space-between;
+}

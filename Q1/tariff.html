@@ -1,0 +1,175 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Tariff Hotel Booking</title>
+<link rel="stylesheet" href="tarif.css">
+</head>
+<body>
+
+    <header>
+        <h1>Welcome to Tariff Hotel</h1>
+    </header>
+<section class="row">
+
+    <!-- Room 1 -->
+    <div class="room">
+        <h2>Room Number 1</h2>
+      <a target="_blank" href="https://i.pinimg.com/originals/69/bd/ff/69bdfff422c17ad63091670cfcf42af0.jpg">   <img src="https://i.pinimg.com/originals/69/bd/ff/69bdfff422c17ad63091670cfcf42af0.jpg" alt="Room 1 Image 1">   </a>
+        <p>Description: This cozy room is perfect for a relaxing stay. Enjoy a comfortable bed and a view of the city.</p>
+        <p class="price">$150 per night</p>
+        <button onclick="book()">Book</button>
+    </div>
+
+    <!-- Room 2 -->
+    <div class="room">
+        <h2>Room Number 2</h2>
+      <a target="_blank" href="https://t3.ftcdn.net/jpg/02/71/08/28/360_F_271082810_CtbTjpnOU3vx43ngAKqpCPUBx25udBrg.jpg">    <img src="https://t3.ftcdn.net/jpg/02/71/08/28/360_F_271082810_CtbTjpnOU3vx43ngAKqpCPUBx25udBrg.jpg" alt="Room 2 Image 1"> </a>
+        <p>Description: Our spacious suite with a beautiful ocean view. Ideal for a luxurious getaway.</p>
+        <p class="price">$200 per night</p>
+        <button onclick="book()">Book</button>
+    </div>
+
+    <!-- Room 3 -->
+    <div class="room">
+        <h2>Room Number 3</h2>
+      <a target="_blank" href="https://media.istockphoto.com/id/1066999762/photo/3d-rendering-beautiful-luxury-bedroom-suite-in-hotel-with-tv.jpg?s=612x612&w=0&k=20&c=kh1SoNvZYDdAFOadeKxPVssVKVzbMTIuOHQu-RBDoX0=">    <img src="https://media.istockphoto.com/id/1066999762/photo/3d-rendering-beautiful-luxury-bedroom-suite-in-hotel-with-tv.jpg?s=612x612&w=0&k=20&c=kh1SoNvZYDdAFOadeKxPVssVKVzbMTIuOHQu-RBDoX0=" alt="Room 3 Image 1"> </a>
+        <p>Description: A family-friendly room with two beds and a garden view. Perfect for a vacation with kids.</p>
+        <p class="price">$180 per night</p>
+    <button onclick="book()">Book</button>
+    </div>
+
+        </section>
+
+
+
+    <section class="row">
+
+    <!-- Room 4 -->
+    <div class="room">
+        <h2>Room Number 4</h2>
+      <a target="_blank" href="https://www.cheaphotelsall.com/wp-content/uploads/2021/08/Best-Hotel-Room-1536x879.jpg">    <img src="https://www.cheaphotelsall.com/wp-content/uploads/2021/08/Best-Hotel-Room-1536x879.jpg" alt="Room 4 Image 1">  </a>
+        <p>Description: This modern room offers a workspace and city skyline views. Ideal for business travelers.</p>
+        <p class="price">$170 per night</p>
+        <button onclick="book()">Book</button>
+    </div>
+
+    <!-- Room 5 -->
+    <div class="room">
+        <h2>Room Number 5</h2>
+  <a target="_blank" href="https://www.bestwesternplusmeridian.com/Content/images/room_banner_new.jpg">    <img src="https://www.bestwesternplusmeridian.com/Content/images/room_banner_new.jpg" alt="Room 5 Image 1">  </a>
+        <p>Description: A romantic suite with a jacuzzi and a balcony overlooking the mountains.</p>
+        <p class="price">$250 per night</p>
+  <button onclick="book()">Book</button>
+    </div>
+
+    <!-- Room 6 -->
+    <div class="room">
+        <h2>Room Number 6</h2>
+      <a target="_blank" href="https://www.usatoday.com/gcdn/-mm-/05b227ad5b8ad4e9dcb53af4f31d7fbdb7fa901b/c=0-64-2119-1259/local/-/media/USATODAY/USATODAY/2014/08/13/1407953244000-177513283.jpg">    <img src="https://www.usatoday.com/gcdn/-mm-/05b227ad5b8ad4e9dcb53af4f31d7fbdb7fa901b/c=0-64-2119-1259/local/-/media/USATODAY/USATODAY/2014/08/13/1407953244000-177513283.jpg" alt="Room 6 Image 1">  </a>
+        <p>Description: An eco-friendly room with sustainable amenities and a lush garden view.</p>
+        <p class="price">$160 per night</p>
+        <button onclick="book()">Book</button>
+    </div>
+
+
+
+    </section>
+
+
+    <div class="footer">
+        &copy; 2023 Tariff Hotel. All rights reserved by roshan.
+    </div>
+
+
+    <!-- Button to change text style -->
+        <button id="changeTextStyleButton">Change Text Style</button>
+
+
+        <!-- Button to change background color -->
+        <button id="changeBackgroundColorButton">Change Background Color</button>
+
+
+
+
+        <script>
+          function book() {
+            const totalGuests = "Your Hotel has all these features hotel room items such as TVs, sound systems, refrigerators, mini-bars, free Wi-Fi, coffee-makers, hairdryers, and more...";
+            alert("Your Room is booked " + totalGuests);
+          }
+        </script>
+
+
+
+    <!-- JavaScript code for button click actions -->
+    <script>
+        const changeTextStyleButton = document.getElementById('changeTextStyleButton');
+        const changeTextColorButton = document.getElementById('changeTextColorButton');
+        const changeBackgroundColorButton = document.getElementById('changeBackgroundColorButton');
+        const allElements = document.querySelectorAll('*'); // Select all HTML elements
+
+        // Array of text styles
+        const textStyles = [
+            { fontSize: '16px', fontFamily: 'Arial' },
+            { fontSize: '18px', fontFamily: 'Times New Roman' },
+            { fontSize: '20px', fontFamily: 'Verdana' },
+            { fontSize: '14px', fontFamily: 'Courier New' },
+            { fontSize: '22px', fontFamily: 'Georgia' },
+            { fontSize: '19px', fontFamily: 'Helvetica' },
+            { fontSize: '17px', fontFamily: 'Tahoma' },
+            { fontSize: '15px', fontFamily: 'Lucida Sans' },
+            { fontSize: '21px', fontFamily: 'Palatino' },
+            { fontSize: '24px', fontFamily: 'Impact' }
+            // Add more text styles as needed
+        ];
+        let currentTextStyleIndex = 0;
+
+        // Array of background colors
+        const backgroundColors = [
+            'white',
+            'lightgray',
+            'lightblue',
+            'lightgreen',
+            'lightyellow',
+            'lavender',
+            'lightcoral',
+            'lightseagreen',
+            'mistyrose',
+            'lightsteelblue'
+            // Add more colors as needed
+        ];
+        let currentBackgroundColorIndex = 0;
+
+        // Function to change the text style
+        function changeTextStyle() {
+            currentTextStyleIndex = (currentTextStyleIndex + 1) % textStyles.length;
+            const currentStyle = textStyles[currentTextStyleIndex];
+            // Apply the new text style to all HTML elements
+            allElements.forEach(element => {
+                Object.assign(element.style, currentStyle);
+            });
+        }
+
+
+
+        // Function to change the background color
+        function changeBackgroundColor() {
+            currentBackgroundColorIndex = (currentBackgroundColorIndex + 1) % backgroundColors.length;
+            // Apply the new background color to all HTML elements
+            allElements.forEach(element => {
+                element.style.backgroundColor = backgroundColors[currentBackgroundColorIndex];
+            });
+        }
+
+        // Add event listeners to buttons
+        changeTextStyleButton.addEventListener('click', changeTextStyle);
+          changeBackgroundColorButton.addEventListener('click', changeBackgroundColor);
+    </script>
+
+
+
+
+
+</body>
+</html>

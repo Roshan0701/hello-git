@@ -1,0 +1,211 @@
+<!DOCTYPE html>
+<html lang="en" dir="ltr">
+  <head>
+    <meta charset="utf-8">
+    <title></title>
+
+      <link rel="stylesheet" href="hotel.css">
+
+      <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.6.4/jquery.min.js"></script>
+<script>
+$(document).ready(function(){
+  $(".cor").click(function(){
+    $("h1").animate({
+
+        fontSize: '+=150px',
+    });
+  });
+});
+</script>
+
+<script>
+$(document).ready(function(){
+  $("h1").click(function(){
+    $("h1").animate({
+
+      fontSize: '-=150px',
+    });
+  });
+});
+</script>
+
+  </head>
+  <body id="newsletter">
+
+        <section >
+
+          <h1>Contact Us:)  </h1>
+
+          <button class="cor" >h </button>
+
+          <div class="container">
+
+            <form action="/action_page.php">
+
+              <div class="row">
+
+                <div class="col-25">
+
+                  <label for="fname">First Name</label>
+
+                </div>
+
+                <div class="col-75">
+
+                  <input type="text" id="fname" name="firstname" placeholder="Your name..">
+
+                </div>
+
+              </div>
+
+              <div class="row">
+
+                <div class="col-25">
+
+                  <label for="lname">Last Name</label>
+
+                </div>
+
+                <div class="col-75">
+
+                  <input type="text" id="lname" name="lastname" placeholder="Your last name..">
+
+                </div>
+
+              </div>
+
+              <div class="row">
+
+                <div class="col-25">
+
+                  <label for="Subject">Reason</label>
+
+                </div>
+
+                <div class="col-75">
+
+
+
+               <textarea name="Reason" rows="5" cols="30"   placeholder="" > </textarea>
+
+
+
+                </div>
+
+              </div>
+
+              <div class="row">
+
+                <div class="col-25">
+
+                  <label for="email">Email</label>
+
+                </div>
+
+                <div class="col-75">
+
+                  <input type="email" id="email" name="email">
+
+                </div>
+
+              </div>
+
+              <br>
+
+              <div class="row">
+
+                <input type="submit" value="Submit">
+
+              </div>
+
+            </form>
+
+          </div>
+
+        </section>
+
+
+        <br><br>
+
+        <!-- Button to change text style -->
+            <button id="changeTextStyleButton">Change Text Style</button>
+
+
+            <!-- Button to change background color -->
+            <button id="changeBackgroundColorButton">Change Background Color</button>
+
+
+
+
+
+
+        <!-- JavaScript code for button click actions -->
+        <script>
+            const changeTextStyleButton = document.getElementById('changeTextStyleButton');
+            const changeTextColorButton = document.getElementById('changeTextColorButton');
+            const changeBackgroundColorButton = document.getElementById('changeBackgroundColorButton');
+            const allElements = document.querySelectorAll('*'); // Select all HTML elements
+
+            // Array of text styles
+            const textStyles = [
+                { fontSize: '16px', fontFamily: 'Arial' },
+                { fontSize: '18px', fontFamily: 'Times New Roman' },
+                { fontSize: '20px', fontFamily: 'Verdana' },
+                { fontSize: '14px', fontFamily: 'Courier New' },
+                { fontSize: '22px', fontFamily: 'Georgia' },
+                { fontSize: '19px', fontFamily: 'Helvetica' },
+                { fontSize: '17px', fontFamily: 'Tahoma' },
+                { fontSize: '15px', fontFamily: 'Lucida Sans' },
+                { fontSize: '21px', fontFamily: 'Palatino' },
+                { fontSize: '24px', fontFamily: 'Impact' }
+                // Add more text styles as needed
+            ];
+            let currentTextStyleIndex = 0;
+
+            // Array of background colors
+            const backgroundColors = [
+                'white',
+                'lightgray',
+                'lightblue',
+                'lightgreen',
+                'lightyellow',
+                'lavender',
+                'lightcoral',
+                'lightseagreen',
+                'mistyrose',
+                'lightsteelblue'
+                // Add more colors as needed
+            ];
+            let currentBackgroundColorIndex = 0;
+
+            // Function to change the text style
+            function changeTextStyle() {
+                currentTextStyleIndex = (currentTextStyleIndex + 1) % textStyles.length;
+                const currentStyle = textStyles[currentTextStyleIndex];
+                // Apply the new text style to all HTML elements
+                allElements.forEach(element => {
+                    Object.assign(element.style, currentStyle);
+                });
+            }
+
+
+
+            // Function to change the background color
+            function changeBackgroundColor() {
+                currentBackgroundColorIndex = (currentBackgroundColorIndex + 1) % backgroundColors.length;
+                // Apply the new background color to all HTML elements
+                allElements.forEach(element => {
+                    element.style.backgroundColor = backgroundColors[currentBackgroundColorIndex];
+                });
+            }
+
+            // Add event listeners to buttons
+            changeTextStyleButton.addEventListener('click', changeTextStyle);
+              changeBackgroundColorButton.addEventListener('click', changeBackgroundColor);
+        </script>
+
+
+
+
+  </body>
+</html>
